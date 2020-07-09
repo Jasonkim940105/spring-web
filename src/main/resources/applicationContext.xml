@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               https://www.springframework.org/schema/context/spring-context.xsd
+               http://www.springframework.org/schema/aop
+               http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+
+>
+    <context:component-scan base-package="jaden.spring.web"></context:component-scan>
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+    <!--
+        <bean id="log" class="jaden.spring.web.common.LogAdvice"/>
+        <bean id="around" class="jaden.spring.web.common.AroundAdvice"/>
+        <bean id="afterAdvice" class="jaden.spring.web.common.AfterAdvice"/>
+        <bean id="before" class="jaden.spring.web.common.BeforeAdvice"/>
+        <bean id="afterReturning" class="jaden.spring.web.common.AfterReturningAdvice"/>
+        <bean id="afterThrowing" class="jaden.spring.web.common.AfterThrowingAdvice"/>
+
+        <aop:config>
+            <aop:pointcut id="allPointcut" expression="execution(* jaden.spring.web..*Impl.*(..))"/> 위치 잡아줌
+            <aop:pointcut id="getPointcut" expression="execution(* jaden.spring.web..*Impl.get*(..))"/>
+            <aop:aspect ref="around"> &lt;!&ndash;아넣을 횡다관심객체&ndash;&gt;
+                <aop:around method="aroundLog" pointcut-ref="getPointcut"/>
+            </aop:aspect>
+        </aop:config>
+    -->
+
+
+</beans>
