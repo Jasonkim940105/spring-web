@@ -24,3 +24,11 @@ Bean Factory 라이프 사이클
 
 
 ------------------------------------------------------------------------------------------------------------------------
+
+
+@RequestParam 어노테이션이 적용된 파라미터가 String이 아닐 경우 실제 타입에 따라서 알맞 게 타입 변환을 수행한다.
+만약 변환에 실패하면 스프링 MVC는 잘못된 요청(Bad Request)를 의미하는 400 응답코드
+필수가 아닌 파라미터인 경우 required 속성 값을 false로 지정
+@RequestParam(value="query", required=false) String query
+defaultValue 속성을 이용해서 기본 값을 지정하면 된다.
+@RequestParam(value="p", defaultValue="1") int pageNumber

@@ -2,8 +2,6 @@ package jaden.spring.web.board.impl;
 
 import jaden.spring.web.board.BoardService;
 import jaden.spring.web.board.BoardVO;
-import jaden.spring.web.common.Log4jAdvice;
-import jaden.spring.web.common.LogAdvice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

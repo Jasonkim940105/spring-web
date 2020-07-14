@@ -1,14 +1,54 @@
 package jaden.spring.web.board;
 
-import java.sql.Date;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.xml.bind.annotation.*;
+import java.util.Date;
+
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class BoardVO {
+    @XmlAttribute
     private int seq;
     private String title;
     private String writer;
     private String content;
     private Date regdate;
     private int cnt;
+    @XmlTransient
+    private String searchCondition;
+    @XmlTransient
+    private String searchKeyword;
+    @XmlTransient
+    private MultipartFile uploadFile;
+
+    @JsonIgnore
+    public MultipartFile getUploadFile() {
+        return uploadFile;
+    }
+
+    public void setUploadFile(MultipartFile uploadFile) {
+        this.uploadFile = uploadFile;
+    }
+
+    @JsonIgnore
+    public String getSearchCondition() {
+        return searchCondition;
+    }
+
+    public void setSearchCondition(String searchCondition) {
+        this.searchCondition = searchCondition;
+    }
+
+    @JsonIgnore
+    public String getSearchKeyword() {
+        return searchKeyword;
+    }
+
+    public void setSearchKeyword(String searchKeyword) {
+        this.searchKeyword = searchKeyword;
+    }
 
     public int getSeq() {
         return seq;
